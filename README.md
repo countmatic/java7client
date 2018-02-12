@@ -116,6 +116,41 @@ public class JavaTestclient {
 
 ```
 
+Output will be similar to this
+
+```
+
+Testing countmatic.io
+
+(1) Got a token: 0c6d0737-b81c-43f2-909b-f1578daba785-rw
+
+(2) Got a counter: class Counter {
+    name: JavaTestCounter
+    count: 11
+    modified: 0
+}
+
+(3) Got another counter: class Counter {
+    name: AnotherJavaTestCounter
+    count: 42
+    modified: 1518446153593
+}
+
+(4) Got a readonly-token: 5c02c4fd-32e7-4b8a-af12-2c0c5b8e0974-ro
+
+(5) Got some readings: class Counters {
+    [class Counter {
+        name: JavaTestCounter
+        count: 11
+        modified: 1518446153566
+    }, class Counter {
+        name: AnotherJavaTestCounter
+        count: 42
+        modified: 1518446153593
+    }]
+}
+
+```
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.countmatic.io/v2*
