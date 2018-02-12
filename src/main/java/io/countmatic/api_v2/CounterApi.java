@@ -69,18 +69,17 @@ public class CounterApi {
      */
     public com.squareup.okhttp.Call addCounterCall(String token, String name, Long initialvalue, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-
+        
         // create path and map variables
         String localVarPath = "/counter/add";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (token != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("token", token));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "token", token));
         if (name != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("name", name));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "name", name));
         if (initialvalue != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("initialvalue", initialvalue));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "initialvalue", initialvalue));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -111,9 +110,9 @@ public class CounterApi {
         }
 
         String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-
+    
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call addCounterValidateBeforeCall(String token, String name, Long initialvalue, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -127,10 +126,14 @@ public class CounterApi {
             throw new ApiException("Missing the required parameter 'name' when calling addCounter(Async)");
         }
         
-
+        
         com.squareup.okhttp.Call call = addCounterCall(token, name, initialvalue, progressListener, progressRequestListener);
         return call;
 
+        
+        
+        
+        
     }
 
     /**
@@ -209,16 +212,15 @@ public class CounterApi {
      */
     public com.squareup.okhttp.Call deleteCounterCall(String token, String name, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-
+        
         // create path and map variables
         String localVarPath = "/counter/delete";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (token != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("token", token));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "token", token));
         if (name != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("name", name));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "name", name));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -249,9 +251,9 @@ public class CounterApi {
         }
 
         String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-
+    
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call deleteCounterValidateBeforeCall(String token, String name, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -260,10 +262,14 @@ public class CounterApi {
             throw new ApiException("Missing the required parameter 'token' when calling deleteCounter(Async)");
         }
         
-
+        
         com.squareup.okhttp.Call call = deleteCounterCall(token, name, progressListener, progressRequestListener);
         return call;
 
+        
+        
+        
+        
     }
 
     /**
@@ -339,16 +345,15 @@ public class CounterApi {
      */
     public com.squareup.okhttp.Call getCurrentReadingCall(String token, String name, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-
+        
         // create path and map variables
         String localVarPath = "/counter/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (token != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("token", token));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "token", token));
         if (name != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("name", name));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "name", name));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -379,9 +384,9 @@ public class CounterApi {
         }
 
         String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-
+    
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getCurrentReadingValidateBeforeCall(String token, String name, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -390,10 +395,14 @@ public class CounterApi {
             throw new ApiException("Missing the required parameter 'token' when calling getCurrentReading(Async)");
         }
         
-
+        
         com.squareup.okhttp.Call call = getCurrentReadingCall(token, name, progressListener, progressRequestListener);
         return call;
 
+        
+        
+        
+        
     }
 
     /**
@@ -469,16 +478,15 @@ public class CounterApi {
      */
     public com.squareup.okhttp.Call getNewCounterCall(String name, Long initialvalue, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-
+        
         // create path and map variables
         String localVarPath = "/counter/new";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (name != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("name", name));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "name", name));
         if (initialvalue != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("initialvalue", initialvalue));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "initialvalue", initialvalue));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -509,9 +517,9 @@ public class CounterApi {
         }
 
         String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-
+    
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getNewCounterValidateBeforeCall(String name, Long initialvalue, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -520,10 +528,14 @@ public class CounterApi {
             throw new ApiException("Missing the required parameter 'name' when calling getNewCounter(Async)");
         }
         
-
+        
         com.squareup.okhttp.Call call = getNewCounterCall(name, initialvalue, progressListener, progressRequestListener);
         return call;
 
+        
+        
+        
+        
     }
 
     /**
@@ -598,14 +610,13 @@ public class CounterApi {
      */
     public com.squareup.okhttp.Call getReadOnlyTokenCall(String token, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-
+        
         // create path and map variables
         String localVarPath = "/counter/readonly";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (token != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("token", token));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "token", token));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -636,9 +647,9 @@ public class CounterApi {
         }
 
         String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-
+    
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getReadOnlyTokenValidateBeforeCall(String token, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -647,10 +658,14 @@ public class CounterApi {
             throw new ApiException("Missing the required parameter 'token' when calling getReadOnlyToken(Async)");
         }
         
-
+        
         com.squareup.okhttp.Call call = getReadOnlyTokenCall(token, progressListener, progressRequestListener);
         return call;
 
+        
+        
+        
+        
     }
 
     /**
@@ -724,18 +739,17 @@ public class CounterApi {
      */
     public com.squareup.okhttp.Call nextNumberCall(String token, String name, Long increment, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-
+        
         // create path and map variables
         String localVarPath = "/counter/next";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (token != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("token", token));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "token", token));
         if (name != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("name", name));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "name", name));
         if (increment != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("increment", increment));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "increment", increment));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -766,9 +780,9 @@ public class CounterApi {
         }
 
         String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-
+    
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call nextNumberValidateBeforeCall(String token, String name, Long increment, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -777,10 +791,14 @@ public class CounterApi {
             throw new ApiException("Missing the required parameter 'token' when calling nextNumber(Async)");
         }
         
-
+        
         com.squareup.okhttp.Call call = nextNumberCall(token, name, increment, progressListener, progressRequestListener);
         return call;
 
+        
+        
+        
+        
     }
 
     /**
@@ -860,18 +878,17 @@ public class CounterApi {
      */
     public com.squareup.okhttp.Call previousNumberCall(String token, String name, Long decrement, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-
+        
         // create path and map variables
         String localVarPath = "/counter/previous";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (token != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("token", token));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "token", token));
         if (name != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("name", name));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "name", name));
         if (decrement != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("decrement", decrement));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "decrement", decrement));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -902,9 +919,9 @@ public class CounterApi {
         }
 
         String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-
+    
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call previousNumberValidateBeforeCall(String token, String name, Long decrement, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -913,10 +930,14 @@ public class CounterApi {
             throw new ApiException("Missing the required parameter 'token' when calling previousNumber(Async)");
         }
         
-
+        
         com.squareup.okhttp.Call call = previousNumberCall(token, name, decrement, progressListener, progressRequestListener);
         return call;
 
+        
+        
+        
+        
     }
 
     /**
@@ -996,18 +1017,17 @@ public class CounterApi {
      */
     public com.squareup.okhttp.Call resetCounterCall(String token, String name, Long initialvalue, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
-
+        
         // create path and map variables
         String localVarPath = "/counter/reset";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (token != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("token", token));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "token", token));
         if (name != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("name", name));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "name", name));
         if (initialvalue != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("initialvalue", initialvalue));
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "initialvalue", initialvalue));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1038,9 +1058,9 @@ public class CounterApi {
         }
 
         String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
-
+    
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call resetCounterValidateBeforeCall(String token, String name, Long initialvalue, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -1049,10 +1069,14 @@ public class CounterApi {
             throw new ApiException("Missing the required parameter 'token' when calling resetCounter(Async)");
         }
         
-
+        
         com.squareup.okhttp.Call call = resetCounterCall(token, name, initialvalue, progressListener, progressRequestListener);
         return call;
 
+        
+        
+        
+        
     }
 
     /**

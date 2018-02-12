@@ -14,7 +14,6 @@
 package io.countmatic.api_v2.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,7 +27,7 @@ import java.io.IOException;
  * an access token for that API
  */
 @ApiModel(description = "an access token for that API")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T17:36:10.819Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T19:01:28.229+01:00")
 public class Token {
   @SerializedName("token")
   private String token = null;
@@ -90,6 +89,6 @@ public class Token {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
+  
 }
 

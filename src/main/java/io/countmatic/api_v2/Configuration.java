@@ -13,7 +13,7 @@
 
 package io.countmatic.api_v2;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T17:36:10.819Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T19:01:28.229+01:00")
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 
