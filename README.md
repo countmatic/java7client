@@ -72,30 +72,46 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import io.countmatic.api_v2.*;
-import io.countmatic.api_v2.auth.*;
-import io.countmatic.api_v2.model.*;
+package io.countmtic.test;
+
+import io.countmatic.api_v2.ApiException;
 import io.countmatic.api_v2.CounterApi;
+import io.countmatic.api_v2.model.Counter;
+import io.countmatic.api_v2.model.Counters;
+import io.countmatic.api_v2.model.Token;
 
-import java.io.File;
-import java.util.*;
+public class JavaTestclient {
 
-public class CounterApiExample {
+	static final String COUNTER_NAME = "JavaTestCounter";
+	static final String ANOTHER_COUNTER = "AnotherJavaTestCounter";
+	
+	public static void main(String[] args) throws ApiException {
+		// get a api client
+		CounterApi counterApi = new CounterApi();
+		System.out.println("Testing countmatic.io");
+		
+		// create a new counter
+		Token token = counterApi.getNewCounter(COUNTER_NAME, 10l);
+		System.out.println("\n(1) Got a token: " + token.getToken());
+		
+		// increment counter
+		Counter counter = counterApi.nextNumber(token.getToken(), COUNTER_NAME, 1l);
+		System.out.println("\n(2) Got a counter: " + counter.toString());		
+		
+		// add another counter with 42 initial
+		counter = counterApi.addCounter(token.getToken(), ANOTHER_COUNTER, 42l);
+		System.out.println("\n(3) Got another counter: " + counter.toString());	
+		
+		// get readonly token
+		Token readonlyToken = counterApi.getReadOnlyToken(token.getToken());
+		System.out.println("\n(4) Got a readonly-token: " + readonlyToken.getToken());
+		
+		// read the current values with the readonly token
+		Counters counters = counterApi.getCurrentReading(readonlyToken.getToken(), null);
+		System.out.println("\n(5) Got some readings: " + counters.toString());	
+		
+	}
 
-    public static void main(String[] args) {
-        
-        CounterApi apiInstance = new CounterApi();
-        String token = "token_example"; // String | Your access token
-        String name = "name_example"; // String | The name of the counter
-        Long initialvalue = 789L; // Long | Initial value for the counter, default is 0
-        try {
-            Counter result = apiInstance.addCounter(token, name, initialvalue);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CounterApi#addCounter");
-            e.printStackTrace();
-        }
-    }
 }
 
 ```
