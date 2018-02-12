@@ -1,8 +1,18 @@
 # cm-java7client-v2
 
+countmatic api
+- API version: 2.0.2
+  - Build date: 2018-02-12T17:36:10.819Z
+
+countmatic is a service to provide counters as web service. Sure, counters are simple artefacts of IT systems. But they are part of *every* system. There are numerous use cases where you need distributed enumerators in IoT manufacturing or i.e. production reporting.    Find out more [https://countmatic.io](https://countmatic.io).
+
+
 ## Requirements
 
-Building the API client library requires [Maven](https://maven.apache.org/) to be installed.
+Building the API client library requires:
+1. Java 1.7+
+2. Maven/Gradle# cm-java7client-v2
+
 
 ## Installation
 
