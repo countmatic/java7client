@@ -11,12 +11,12 @@
  */
 
 
-package io.countmatic.api_v2;
+package io.countmatic.api.v2;
 
-import io.countmatic.api_v2.ApiException;
-import io.countmatic.api_v2.model.Counter;
-import io.countmatic.api_v2.model.Error;
-import io.countmatic.api_v2.model.ServerInfo;
+import io.countmatic.api.v2.ApiException;
+import io.countmatic.api.v2.model.Counter;
+import io.countmatic.api.v2.model.Error;
+import io.countmatic.api.v2.model.ServerInfo;
 import org.junit.Test;
 import org.junit.Ignore;
 

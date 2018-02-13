@@ -1,18 +1,8 @@
 # cm-java7client-v2
 
-countmatic api
-- API version: 2.0.2
-  - Build date: 2018-02-12T17:36:10.819Z
-
-countmatic is a service to provide counters as web service. Sure, counters are simple artefacts of IT systems. But they are part of *every* system. There are numerous use cases where you need distributed enumerators in IoT manufacturing or i.e. production reporting.    Find out more [https://countmatic.io](https://countmatic.io).
-
-
 ## Requirements
 
-Building the API client library requires:
-1. Java 1.7+
-2. Maven/Gradle# cm-java7client-v2
-
+Building the API client library requires [Maven](https://maven.apache.org/) to be installed.
 
 ## Installation
 
@@ -68,85 +58,34 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-package io.countmtic.test;
+import io.countmatic.api.v2.*;
+import io.countmatic.api.v2.auth.*;
+import io.countmatic.api.v2.model.*;
+import io.countmatic.api.v2.CounterApi;
 
-import io.countmatic.api_v2.ApiException;
-import io.countmatic.api_v2.CounterApi;
-import io.countmatic.api_v2.model.Counter;
-import io.countmatic.api_v2.model.Counters;
-import io.countmatic.api_v2.model.Token;
+import java.io.File;
+import java.util.*;
 
-public class JavaTestclient {
+public class CounterApiExample {
 
-	static final String COUNTER_NAME = "JavaTestCounter";
-	static final String ANOTHER_COUNTER = "AnotherJavaTestCounter";
-	
-	public static void main(String[] args) throws ApiException {
-		// get a api client
-		CounterApi counterApi = new CounterApi();
-		System.out.println("Testing countmatic.io");
-		
-		// create a new counter
-		Token token = counterApi.getNewCounter(COUNTER_NAME, 10l);
-		System.out.println("\n(1) Got a token: " + token.getToken());
-		
-		// increment counter
-		Counter counter = counterApi.nextNumber(token.getToken(), COUNTER_NAME, 1l);
-		System.out.println("\n(2) Got a counter: " + counter.toString());		
-		
-		// add another counter with 42 initial
-		counter = counterApi.addCounter(token.getToken(), ANOTHER_COUNTER, 42l);
-		System.out.println("\n(3) Got another counter: " + counter.toString());	
-		
-		// get readonly token
-		Token readonlyToken = counterApi.getReadOnlyToken(token.getToken());
-		System.out.println("\n(4) Got a readonly-token: " + readonlyToken.getToken());
-		
-		// read the current values with the readonly token
-		Counters counters = counterApi.getCurrentReading(readonlyToken.getToken(), null);
-		System.out.println("\n(5) Got some readings: " + counters.toString());	
-		
-	}
-
+    public static void main(String[] args) {
+        
+        CounterApi apiInstance = new CounterApi();
+        String token = "token_example"; // String | Your access token
+        String name = "name_example"; // String | The name of the counter
+        Long initialvalue = 789L; // Long | Initial value for the counter, default is 0
+        try {
+            Counter result = apiInstance.addCounter(token, name, initialvalue);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling CounterApi#addCounter");
+            e.printStackTrace();
+        }
+    }
 }
 
 ```
 
-Output will be similar to this
-
-```
-
-Testing countmatic.io
-
-(1) Got a token: 0c6d0737-b81c-43f2-909b-f1578daba785-rw
-
-(2) Got a counter: class Counter {
-    name: JavaTestCounter
-    count: 11
-    modified: 0
-}
-
-(3) Got another counter: class Counter {
-    name: AnotherJavaTestCounter
-    count: 42
-    modified: 1518446153593
-}
-
-(4) Got a readonly-token: 5c02c4fd-32e7-4b8a-af12-2c0c5b8e0974-ro
-
-(5) Got some readings: class Counters {
-    [class Counter {
-        name: JavaTestCounter
-        count: 11
-        modified: 1518446153566
-    }, class Counter {
-        name: AnotherJavaTestCounter
-        count: 42
-        modified: 1518446153593
-    }]
-}
-
-```
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.countmatic.io/v2*

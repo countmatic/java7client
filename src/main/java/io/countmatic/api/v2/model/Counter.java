@@ -11,7 +11,7 @@
  */
 
 
-package io.countmatic.api_v2.model;
+package io.countmatic.api.v2.model;
 
 import java.util.Objects;
 import com.google.gson.TypeAdapter;
@@ -27,7 +27,7 @@ import java.io.IOException;
  * a single counter with name, reading and modification timestamp
  */
 @ApiModel(description = "a single counter with name, reading and modification timestamp")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T19:01:28.229+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-13T08:49:11.883+01:00")
 public class Counter {
   @SerializedName("name")
   private String name = null;

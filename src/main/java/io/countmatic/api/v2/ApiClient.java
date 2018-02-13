@@ -11,7 +11,7 @@
  */
 
 
-package io.countmatic.api_v2;
+package io.countmatic.api.v2;
 
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;
@@ -74,10 +74,10 @@ import javax.net.ssl.X509TrustManager;
 import okio.BufferedSink;
 import okio.Okio;
 
-import io.countmatic.api_v2.auth.Authentication;
-import io.countmatic.api_v2.auth.HttpBasicAuth;
-import io.countmatic.api_v2.auth.ApiKeyAuth;
-import io.countmatic.api_v2.auth.OAuth;
+import io.countmatic.api.v2.auth.Authentication;
+import io.countmatic.api.v2.auth.HttpBasicAuth;
+import io.countmatic.api.v2.auth.ApiKeyAuth;
+import io.countmatic.api.v2.auth.OAuth;
 
 public class ApiClient {
     public static final double JAVA_VERSION;

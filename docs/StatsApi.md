@@ -17,8 +17,8 @@ Request the number of currently open counters on that countmatic backend
 ### Example
 ```java
 // Import classes:
-//import io.countmatic.api_v2.ApiException;
-//import io.countmatic.api_v2.StatsApi;
+//import io.countmatic.api.v2.ApiException;
+//import io.countmatic.api.v2.StatsApi;
 
 
 StatsApi apiInstance = new StatsApi();
@@ -56,8 +56,8 @@ Request information about the cm backend and its load
 ### Example
 ```java
 // Import classes:
-//import io.countmatic.api_v2.ApiException;
-//import io.countmatic.api_v2.StatsApi;
+//import io.countmatic.api.v2.ApiException;
+//import io.countmatic.api.v2.StatsApi;
 
 
 StatsApi apiInstance = new StatsApi();

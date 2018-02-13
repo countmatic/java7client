@@ -11,7 +11,7 @@
  */
 
 
-package io.countmatic.api_v2;
+package io.countmatic.api.v2;
 
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.RequestBody;

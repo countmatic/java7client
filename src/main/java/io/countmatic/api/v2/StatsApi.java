@@ -11,25 +11,25 @@
  */
 
 
-package io.countmatic.api_v2;
+package io.countmatic.api.v2;
 
-import io.countmatic.api_v2.ApiCallback;
-import io.countmatic.api_v2.ApiClient;
-import io.countmatic.api_v2.ApiException;
-import io.countmatic.api_v2.ApiResponse;
-import io.countmatic.api_v2.Configuration;
-import io.countmatic.api_v2.Pair;
-import io.countmatic.api_v2.ProgressRequestBody;
-import io.countmatic.api_v2.ProgressResponseBody;
+import io.countmatic.api.v2.ApiCallback;
+import io.countmatic.api.v2.ApiClient;
+import io.countmatic.api.v2.ApiException;
+import io.countmatic.api.v2.ApiResponse;
+import io.countmatic.api.v2.Configuration;
+import io.countmatic.api.v2.Pair;
+import io.countmatic.api.v2.ProgressRequestBody;
+import io.countmatic.api.v2.ProgressResponseBody;
 
 import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 
 
-import io.countmatic.api_v2.model.Counter;
-import io.countmatic.api_v2.model.Error;
-import io.countmatic.api_v2.model.ServerInfo;
+import io.countmatic.api.v2.model.Counter;
+import io.countmatic.api.v2.model.Error;
+import io.countmatic.api.v2.model.ServerInfo;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

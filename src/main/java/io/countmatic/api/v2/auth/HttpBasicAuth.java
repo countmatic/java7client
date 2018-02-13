@@ -11,9 +11,9 @@
  */
 
 
-package io.countmatic.api_v2.auth;
+package io.countmatic.api.v2.auth;
 
-import io.countmatic.api_v2.Pair;
+import io.countmatic.api.v2.Pair;
 
 import com.squareup.okhttp.Credentials;
 

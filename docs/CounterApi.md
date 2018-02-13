@@ -23,8 +23,8 @@ Add another counter for your access token, this makes it a so called \&quot;grou
 ### Example
 ```java
 // Import classes:
-//import io.countmatic.api_v2.ApiException;
-//import io.countmatic.api_v2.CounterApi;
+//import io.countmatic.api.v2.ApiException;
+//import io.countmatic.api.v2.CounterApi;
 
 
 CounterApi apiInstance = new CounterApi();
@@ -70,8 +70,8 @@ Delete that counter without a trace
 ### Example
 ```java
 // Import classes:
-//import io.countmatic.api_v2.ApiException;
-//import io.countmatic.api_v2.CounterApi;
+//import io.countmatic.api.v2.ApiException;
+//import io.countmatic.api.v2.CounterApi;
 
 
 CounterApi apiInstance = new CounterApi();
@@ -115,8 +115,8 @@ Get current reading of the counters for that token
 ### Example
 ```java
 // Import classes:
-//import io.countmatic.api_v2.ApiException;
-//import io.countmatic.api_v2.CounterApi;
+//import io.countmatic.api.v2.ApiException;
+//import io.countmatic.api.v2.CounterApi;
 
 
 CounterApi apiInstance = new CounterApi();
@@ -160,8 +160,8 @@ Create new counter and retrieve an access token for it. All counters and tokens 
 ### Example
 ```java
 // Import classes:
-//import io.countmatic.api_v2.ApiException;
-//import io.countmatic.api_v2.CounterApi;
+//import io.countmatic.api.v2.ApiException;
+//import io.countmatic.api.v2.CounterApi;
 
 
 CounterApi apiInstance = new CounterApi();
@@ -205,8 +205,8 @@ Request read-only access token for that token
 ### Example
 ```java
 // Import classes:
-//import io.countmatic.api_v2.ApiException;
-//import io.countmatic.api_v2.CounterApi;
+//import io.countmatic.api.v2.ApiException;
+//import io.countmatic.api.v2.CounterApi;
 
 
 CounterApi apiInstance = new CounterApi();
@@ -248,8 +248,8 @@ Increment and get current reading of that counter
 ### Example
 ```java
 // Import classes:
-//import io.countmatic.api_v2.ApiException;
-//import io.countmatic.api_v2.CounterApi;
+//import io.countmatic.api.v2.ApiException;
+//import io.countmatic.api.v2.CounterApi;
 
 
 CounterApi apiInstance = new CounterApi();
@@ -295,8 +295,8 @@ Decrement and get current reading of that counter
 ### Example
 ```java
 // Import classes:
-//import io.countmatic.api_v2.ApiException;
-//import io.countmatic.api_v2.CounterApi;
+//import io.countmatic.api.v2.ApiException;
+//import io.countmatic.api.v2.CounterApi;
 
 
 CounterApi apiInstance = new CounterApi();
@@ -342,8 +342,8 @@ Reset that counter
 ### Example
 ```java
 // Import classes:
-//import io.countmatic.api_v2.ApiException;
-//import io.countmatic.api_v2.CounterApi;
+//import io.countmatic.api.v2.ApiException;
+//import io.countmatic.api.v2.CounterApi;
 
 
 CounterApi apiInstance = new CounterApi();

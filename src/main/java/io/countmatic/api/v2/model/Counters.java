@@ -11,10 +11,10 @@
  */
 
 
-package io.countmatic.api_v2.model;
+package io.countmatic.api.v2.model;
 
 import java.util.Objects;
-import io.countmatic.api_v2.model.Counter;
+import io.countmatic.api.v2.model.Counter;
 import io.swagger.annotations.ApiModel;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ import java.util.List;
  * an array of counters
  */
 @ApiModel(description = "an array of counters")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T19:01:28.229+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-13T08:49:11.883+01:00")
 public class Counters extends ArrayList<Counter> {
 
   @Override
